@@ -2,15 +2,14 @@ import { createGlobalStyle } from 'styled-components'
 
 export const IconfontStyle = createGlobalStyle`
   @font-face {
-    font-family: 'iconfont';  /* project id 1796309 */
-    src: url('//at.alicdn.com/t/font_1796309_qkox8maig5f.eot');
-    src: url('//at.alicdn.com/t/font_1796309_qkox8maig5f.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_1796309_qkox8maig5f.woff2') format('woff2'),
-    url('//at.alicdn.com/t/font_1796309_qkox8maig5f.woff') format('woff'),
-    url('//at.alicdn.com/t/font_1796309_qkox8maig5f.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_1796309_qkox8maig5f.svg#iconfont') format('svg');
+    font-family: 'iconfont';  /* project id 1812358 */
+    src: url('//at.alicdn.com/t/font_1812358_7o33p8mnn4w.eot');
+    src: url('//at.alicdn.com/t/font_1812358_7o33p8mnn4w.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1812358_7o33p8mnn4w.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1812358_7o33p8mnn4w.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1812358_7o33p8mnn4w.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1812358_7o33p8mnn4w.svg#iconfont') format('svg');
   }
-
   .iconfont {
     font-family: "iconfont" !important;
     font-size: 16px;
