@@ -1,6 +1,6 @@
 import React from 'react';
 import { GlobalStyle } from './style'
-import { IconfontStyle } from './assets/iconfont'
+import { IconfontStyle } from '@/assets/iconfont'
 
 function App() {
   return (
