@@ -21,7 +21,7 @@ export default React.memo((props) => {
       })
       setSliderSwiper(newSliderSwiper)
     }
-  },[list.length, sliderSwiper])
+  },[list, sliderSwiper])
 
   return (
     <SliderContainer>
@@ -31,7 +31,7 @@ export default React.memo((props) => {
           {
             list.map((item) => {
               return (
-                <div className="swiper-slide" key={item.id}>
+                <div className="swiper-slide" key={item.imageUrl}>
                   <div className="slider-nav">
                     <img src={item.imageUrl} alt="h" width="100%" height="100%"/>
                   </div>

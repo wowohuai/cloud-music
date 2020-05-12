@@ -1,5 +1,5 @@
 import React , { useRef, useEffect } from 'react'
-import { connect } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import Slider from '@/components/slider'
 import Scroll from '@/components/scroll'
 import List from './components/list'
@@ -8,43 +8,26 @@ import {
   Wrapper
 } from './style'
 const Recommend  = (props) => {
-  const {getBannerDataDispatch, getRecommendListDataDispatch, bannerList, recommendList} = props
   const scroll = useRef()
-
+  const recommendList = useSelector(state => state.getIn(['recommend', 'recommendList']).toJS())
+  const bannerList = useSelector(state => state.getIn(['recommend', 'bannerList']).toJS())
+  const dispatch = useDispatch()
   useEffect(() => {
-    getRecommendListDataDispatch()
-    getBannerDataDispatch()
+      dispatch(actionCreators.getRecommendList())
+      dispatch(actionCreators.getBannerList())
     //eslint-disable-next-line
   }, [])
-  const bannerListJS = bannerList ? bannerList.toJS () : [];
-  const recommendListJS = recommendList ? recommendList.toJS () :[];
 
   return (
     <Wrapper>
       <Scroll ref={scroll} >
         <div> 
-          <Slider list={bannerListJS}/>
-          <List list={recommendListJS}/>
+          <Slider list={bannerList}/>
+          <List list={recommendList}/>
         </div>
       </Scroll>
     </Wrapper>
-    
   )
 }
 
-
-const mapState = state => ({
-  bannerList: state.getIn(['recommend', 'bannerList']),
-  recommendList: state.getIn(['recommend', 'recommendList']),
-})
-
-const mapDispatch = dispatch => ({
-  getBannerDataDispatch () {
-    dispatch (actionCreators.getBannerList())
-  },
-  getRecommendListDataDispatch () {
-    dispatch (actionCreators.getRecommendList())
-  },
-})
-
-export default connect(mapState, mapDispatch)( React.memo(Recommend))
+export default React.memo(Recommend)
