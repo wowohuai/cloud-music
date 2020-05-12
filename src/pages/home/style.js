@@ -34,7 +34,7 @@ export const Tab = styled.div`
         display: block;
         font-weight: 700;
         color: #f1f1f1;
-         position: relative;
+        position: relative;
       }
       span::after{
         position:absolute;
@@ -44,7 +44,7 @@ export const Tab = styled.div`
         background: #ffffff;
         left: 50%;
         transform: translateX(-50%);
-        bottom: -9px;
+        bottom: -7px;
         border-radius: 2px;
       }
     }

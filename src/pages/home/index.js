@@ -17,8 +17,8 @@ export default React.memo((props) => {
       </Top>
       <Tab>
         <NavLink to={'/'} activeClassName="selected"><TabItem><span>推荐</span></TabItem></NavLink>
-        <NavLink to={'/'} activeClassName="selected"><TabItem><span>歌手</span></TabItem></NavLink>
-        <NavLink to={'/'} activeClassName="selected"><TabItem><span>排行榜</span></TabItem></NavLink>
+        <NavLink to={'/'} ><TabItem><span>歌手</span></TabItem></NavLink>
+        <NavLink to={'/'} ><TabItem><span>排行榜</span></TabItem></NavLink>
       </Tab>
       {renderRoutes(route.routes)}
     </>
